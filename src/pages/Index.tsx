@@ -1,13 +1,22 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import SEO from "@/components/SEO";
+import Hero from "@/components/landing/Hero";
+import About from "@/components/landing/About";
+import CoverupHighlight from "@/components/landing/CoverupHighlight";
+import Gallery from "@/components/landing/Gallery";
+import CTASection from "@/components/landing/CTASection";
+import WhatsappButton from "@/components/landing/WhatsappButton";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main>
+      <SEO title="Tatuador Cassiel | Cover-up e Fine Line em Fortaleza" description="Trabalhos autorais, cover-up e fine line com foco em cicatrização e estética. Agende sua sessão pelo WhatsApp." />
+      <Hero />
+      <About />
+      <CoverupHighlight />
+      <Gallery />
+      <CTASection />
+      <WhatsappButton />
+    </main>
   );
 };
 
