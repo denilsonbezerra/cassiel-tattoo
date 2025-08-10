@@ -1,4 +1,5 @@
 import SEO from "@/components/SEO";
+import Header from "@/components/landing/Haeder";
 import Hero from "@/components/landing/Hero";
 import About from "@/components/landing/About";
 import CoverupHighlight from "@/components/landing/CoverupHighlight";
@@ -8,8 +9,9 @@ import WhatsappButton from "@/components/landing/WhatsappButton";
 
 const Index = () => {
   return (
-    <main>
-      <SEO title="Tatuador Cassiel | Cover-up e Fine Line em Fortaleza" description="Trabalhos autorais, cover-up e fine line com foco em cicatrização e estética. Agende sua sessão pelo WhatsApp." />
+    <main className="w-full h-screen overflow-x-hidden">
+      <SEO title="Felipe Cassiel | Tattoos Realism, Blackwork & Cover-up" description="Trabalhos autorais, cover-up e fine line com foco em cicatrização e estética. Agende sua sessão pelo WhatsApp." />
+      <Header  />
       <Hero />
       <About />
       <CoverupHighlight />

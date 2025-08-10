@@ -31,9 +31,9 @@ export default function Gallery() {
               </article>
             </CarouselItem>
           ))}
-        </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
+        </CarouselContent>
       </Carousel>
     </section>
   );

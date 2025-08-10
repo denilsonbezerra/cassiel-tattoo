@@ -6,6 +6,20 @@
 All colors MUST be HSL.
 */
 
+html {
+  scroll-behavior: smooth;
+}
+
+nav a {
+  padding: 10px 15px;
+  border-radius: 7px;
+}
+
+nav a:hover {
+  transition: 300ms ;
+  background-color: #106A6B55;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

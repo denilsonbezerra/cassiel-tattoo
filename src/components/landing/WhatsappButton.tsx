@@ -1,7 +1,7 @@
-import { MessageCircle } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const phone = "558587475079";
-const wa = `https://wa.me/${phone}?text=${encodeURIComponent("Quero agendar uma tatuagem")}`;
+const wa = `https://wa.me/${phone}?text=${encodeURIComponent("Olá,eu gostaria de agendar uma tatuagem")}`;
 
 export default function WhatsappButton() {
   return (
@@ -9,11 +9,10 @@ export default function WhatsappButton() {
       href={wa}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Abrir WhatsApp para agendar com Cassiel"
-      className="fixed bottom-4 right-4 z-50 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-3 text-primary-foreground shadow-lg hover:opacity-90 transition"
+      aria-label="Agendar no WhatsApp"
+      className="fixed bottom-4 right-6 z-50 inline-flex items-center rounded-full bg-primary px-2 py-2 text-primary-foreground shadow-lg hover:opacity-90 transition"
     >
-      <MessageCircle />
-      <span className="hidden sm:inline">WhatsApp</span>
+      <FaWhatsapp size={30} />
     </a>
   );
 }
