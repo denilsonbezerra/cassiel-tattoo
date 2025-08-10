@@ -10,7 +10,7 @@ import WhatsappButton from "@/components/landing/WhatsappButton";
 const Index = () => {
   return (
     <main className="w-full h-screen overflow-x-hidden">
-      <SEO title="Felipe Cassiel | Tattoos Realism, Blackwork & Cover-up" description="Trabalhos autorais, cover-up e fine line com foco em cicatrização e estética. Agende sua sessão pelo WhatsApp." />
+      <SEO title="Felipe Cassiel | Tattoos Realism, Blackwork & Cover-up" description="Custom work, cover-up and fine line with focus on healing and aesthetics. Book your session via WhatsApp." />
       <Header  />
       <Hero />
       <About />

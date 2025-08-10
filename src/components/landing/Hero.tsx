@@ -7,7 +7,7 @@ const wa = `https://wa.me/${phone}?text=${encodeURIComponent("Quero agendar uma 
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[80vh] md:min-h-[90vh] overflow-hidden flex items-center justify-center">
+    <section id="home" className="relative w-full min-h-[80vh] md:min-h-[90vh] overflow-hidden flex items-center justify-center">
       <img
         src={bg}
         alt="Felipe Cassiel | Tattoos Realism, Blackwork & Cover-up"
@@ -26,8 +26,8 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-3">
           <Button asChild className="w-full sm:w-auto">
-            <a href={wa} target="_blank" rel="noopener noreferrer" aria-label="Agendar no WhatsApp">
-              <FaWhatsapp className="text-[35px]" /> AGENDAMENTO PELO WHATSAPP
+            <a href={wa} target="_blank" rel="noopener noreferrer" aria-label="Book on WhatsApp">
+              <FaWhatsapp className="text-[35px]" /> BOOK VIA WHATSAPP
             </a>
           </Button>
         </div>
