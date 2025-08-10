@@ -1,5 +1,6 @@
 import ReptinkLogo from "../../assets/reptink-logo.png";
 
+
 export default function Header() {
     const scrollTo = (id: string) => {
         const el = document.getElementById(id);
@@ -16,11 +17,11 @@ export default function Header() {
             </div>
             <div className="w-1/2">
                 <nav className="flex items-center justify-end gap-2 pr-[40px] font-semibold">
-                    <a href="#home" onClick={(e) => { e.preventDefault(); scrollTo("home"); }}>Home</a>
-                    <a href="#sobre" onClick={(e) => { e.preventDefault(); scrollTo("sobre"); }}>About</a>
-                    <a href="#galeria" onClick={(e) => { e.preventDefault(); scrollTo("galeria"); }}>Gallery</a>
-                    <a href="#coverup" onClick={(e) => { e.preventDefault(); scrollTo("coverup"); }}>Cover‑up</a>
-                    <a href="#contato" onClick={(e) => { e.preventDefault(); scrollTo("contato"); }}>Contact</a>
+                    <a href="#home">Home</a>
+                    <a href="#sobre">About</a>
+                    <a href="#coverup">Cover‑up</a>
+                    <a href="#galeria">Gallery</a>
+                    <a href="#contato">Contact</a>
                 </nav>
             </div>
         </header>

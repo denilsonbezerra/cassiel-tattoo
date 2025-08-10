@@ -7,11 +7,11 @@ const wa = `https://wa.me/${phone}?text=${encodeURIComponent("Quero agendar uma 
 
 export default function Hero() {
   return (
-    <section id="home" className="relative w-full min-h-[80vh] md:min-h-[90vh] overflow-hidden flex items-center justify-center">
+    <section id="home" className="relative w-full min-h-[80vh] md:min-h-[90vh] overflow-hidden flex items-center justify-center bg-[#0E100F]">
       <img
         src={bg}
         alt="Felipe Cassiel | Tattoos Realism, Blackwork & Cover-up"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute w-[80%] object-contain "
         loading="eager"
       />
       <div className="absolute inset-0 bg-foreground/60" />

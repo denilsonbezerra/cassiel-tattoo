@@ -6,7 +6,7 @@
 All colors MUST be HSL.
 */
 
-html {
+html, body {
   scroll-behavior: smooth;
 }
 
