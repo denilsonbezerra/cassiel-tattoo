@@ -1,20 +1,24 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Search } from "lucide-react";
-import g1 from "@/assets/gallery-1.jpg";
+import g1 from "@/assets/gallery-4.jpg";
 import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
-import g6 from "@/assets/gallery-6.jpg";
+import g3 from "@/assets/gallery-6.jpg";
+import g4 from "@/assets/gallery-8.jpg";
+import g5 from "@/assets/gallery-10.jpg";
+import g6 from "@/assets/gallery-12.jpg";
+import g7 from "@/assets/gallery-14.jpg";
+import g8 from "@/assets/gallery-16.jpg";
 
 const items = [
-  { src: g1, alt: "Fine line botanical tattoo" },
-  { src: g2, alt: "Tattoo machine and materials" },
-  { src: g3, alt: "Geometric blackwork on forearm" },
-  { src: g4, alt: "Thin-line floral on ankle" },
-  { src: g5, alt: "Close-up texture detail" },
-  { src: g6, alt: "Stencil prep on skin" },
+  { src: g1, alt: "Tattoo pantheon realism" },
+  { src: g2, alt: "Tattoo coliseum" },
+  { src: g3, alt: "Tattoo eagles realism" },
+  { src: g4, alt: "Tattoo eagles realism" },
+  { src: g5, alt: "Tattoo eagles realism" },
+  { src: g6, alt: "Tattoo eagles realism" },
+  { src: g7, alt: "Tattoo eagles realism" },
+  { src: g8, alt: "Tattoo eagles realism" },
 ];
 
 export default function Gallery() {
@@ -37,7 +41,7 @@ export default function Gallery() {
                         alt={it.alt}
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-80 object-cover transition-all duration-300 group-hover:blur-sm"
+                        className="w-full h-[500px] object-cover transition-all duration-300 group-hover:blur-sm"
                       />
                       <div
                         aria-hidden
@@ -47,8 +51,8 @@ export default function Gallery() {
                       </div>
                     </article>
                   </DialogTrigger>
-                  <DialogContent className="max-w-[90vw] md:max-w-3xl p-2">
-                    <img src={it.src} alt={it.alt} className="w-full h-auto rounded-lg" />
+                  <DialogContent className="max-w-[100vw] max-h-[90dvh] w-auto h-auto p-2">
+                    <img src={it.src} alt={it.alt} className="h-full max-w-full max-h-[80dvh] object-cover rounded-lg" />
                   </DialogContent>
                 </Dialog>
               </CarouselItem>

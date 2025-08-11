@@ -45,24 +45,28 @@ export default function CoverupHighlight() {
           {images.map((it, idx) => (
             <Dialog key={idx}>
               <DialogTrigger asChild>
-                <div className="group relative w-[95%] h-[300px] md:h-[390px] overflow-hidden rounded-md hover-scale animate-fade-in">
+                <div className="group relative w-[95%] h-[300px] md:h-[390px] overflow-hidden rounded-md hover-scale animate-fade-in transition-all duration-300 ease-out hover:shadow-[0_0_7px_rgba(250,250,250,0.2)]">
                   <img
                     src={it.src}
                     alt={it.alt}
-                    className="w-full h-full object-cover transition-all duration-300 group-hover:blur-sm"
+                    className="w-full h-full object-cover transition-all duration-300 group-hover:blur-[2px]"
                     loading="lazy"
                     decoding="async"
                   />
                   <div
                     aria-hidden
-                    className="pointer-events-none absolute inset-0 grid place-items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-background/40 backdrop-blur-sm"
+                    className="pointer-events-none absolute inset-0 grid place-items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-background/5 backdrop-blur-sm"
                   >
                     <Search className="h-9 w-9 text-foreground" />
                   </div>
                 </div>
               </DialogTrigger>
-              <DialogContent className="max-w-[90vw] md:max-w-4xl p-2">
-                <img src={it.src} alt={it.alt} className="w-full h-auto rounded-lg" />
+              <DialogContent className="max-w-[100vw] max-h-[90dvh] w-auto h-auto p-2">
+                <img
+                  src={it.src}
+                  alt={it.alt}
+                  className="h-full max-w-full max-h-[80dvh] object-cover rounded-lg"
+                />
               </DialogContent>
             </Dialog>
           ))}
