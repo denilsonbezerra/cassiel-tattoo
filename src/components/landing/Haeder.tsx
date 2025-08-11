@@ -1,29 +1,64 @@
 import ReptinkLogo from "../../assets/reptink-logo.png";
-
+import { Menu } from "lucide-react";
+import { Sheet, SheetTrigger, SheetContent, SheetClose } from "@/components/ui/sheet";
 
 export default function Header() {
-    const scrollTo = (id: string) => {
-        const el = document.getElementById(id);
-        if (el) {
-            el.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-    };
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
-    return (
-        <header className="w-full h-[100px] flex items-center justify-start bg-[#070B14] text-[#F1F2F3]">
-            <div className="w-1/2 flex items-center gap-4">
-                <img src={ReptinkLogo} className="h-[70px] pl-[30px]" alt="Reptink Logo" />
-                <span className="text-3xl font-bold">REPTINK</span>
+  const handleNav = (id: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollTo(id);
+  };
+
+  return (
+    <header className="w-full h-[100px] flex items-center justify-between bg-[#070B14] text-[#F1F2F3] px-4 md:px-8">
+      {/* Left: Brand */}
+      <div className="flex items-center gap-3">
+        <img src={ReptinkLogo} className="h-[56px] md:h-[70px]" alt="Reptink Logo" />
+        <span className="text-2xl md:text-3xl font-bold">REPTINK</span>
+      </div>
+
+      {/* Desktop Nav */}
+      <nav className="hidden md:flex items-center gap-4 font-semibold">
+        <a href="#home" className="story-link" onClick={handleNav("home")}>Home</a>
+        <a href="#about" className="story-link" onClick={handleNav("about")}>About</a>
+        <a href="#coverup" className="story-link" onClick={handleNav("coverup")}>Cover‑up</a>
+        <a href="#portfolio" className="story-link" onClick={handleNav("portfolio")}>Portfolio</a>
+        <a href="#contact" className="story-link" onClick={handleNav("contact")}>Contact</a>
+      </nav>
+
+      {/* Mobile: Hamburger + Sidebar */}
+      <div className="md:hidden">
+        <Sheet>
+          <SheetTrigger aria-label="Open menu" className="p-2 rounded-md hover:bg-white/5 transition"><Menu /></SheetTrigger>
+          <SheetContent side="left" className="w-72">
+            <div className="flex items-center gap-3 mb-6">
+              <img src={ReptinkLogo} className="h-12" alt="Reptink Logo" />
+              <span className="text-xl font-bold">REPTINK</span>
             </div>
-            <div className="w-1/2">
-                <nav className="flex items-center justify-end gap-2 pr-[40px] font-semibold">
-                    <a href="#home">Home</a>
-                    <a href="#sobre">About</a>
-                    <a href="#coverup">Cover‑up</a>
-                    <a href="#galeria">Gallery</a>
-                    <a href="#contato">Contact</a>
-                </nav>
-            </div>
-        </header>
-    )
+            <nav className="flex flex-col gap-3 text-lg font-medium">
+              <SheetClose asChild>
+                <a href="#home" onClick={handleNav("home")} className="story-link">Home</a>
+              </SheetClose>
+              <SheetClose asChild>
+                <a href="#about" onClick={handleNav("about")} className="story-link">About</a>
+              </SheetClose>
+              <SheetClose asChild>
+                <a href="#coverup" onClick={handleNav("coverup")} className="story-link">Cover‑up</a>
+              </SheetClose>
+              <SheetClose asChild>
+                <a href="#portfolio" onClick={handleNav("portfolio")} className="story-link">Portfolio</a>
+              </SheetClose>
+              <SheetClose asChild>
+                <a href="#contact" onClick={handleNav("contact")} className="story-link">Contact</a>
+              </SheetClose>
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </div>
+    </header>
+  );
 }
