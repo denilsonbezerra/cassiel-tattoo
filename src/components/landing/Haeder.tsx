@@ -13,6 +13,14 @@ export default function Header() {
     scrollTo(id);
   };
 
+  const handleMobileNav = (id: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    // Wait for the sheet to close before scrolling to avoid jumping to top
+    requestAnimationFrame(() => {
+      setTimeout(() => scrollTo(id), 50);
+    });
+  };
+
   return (
     <header className="w-full h-[100px] flex items-center justify-between bg-[#070B14] text-[#F1F2F3] px-4 md:px-8">
       {/* Left: Brand */}
@@ -41,19 +49,19 @@ export default function Header() {
             </div>
             <nav className="flex flex-col gap-3 text-lg font-medium">
               <SheetClose asChild>
-                <a href="#home" onClick={handleNav("home")} className="story-link">Home</a>
+                <button type="button" onClick={handleMobileNav("home")} className="story-link text-left">Home</button>
               </SheetClose>
               <SheetClose asChild>
-                <a href="#about" onClick={handleNav("about")} className="story-link">About</a>
+                <button type="button" onClick={handleMobileNav("about")} className="story-link text-left">About</button>
               </SheetClose>
               <SheetClose asChild>
-                <a href="#coverup" onClick={handleNav("coverup")} className="story-link">Cover‑up</a>
+                <button type="button" onClick={handleMobileNav("coverup")} className="story-link text-left">Cover‑up</button>
               </SheetClose>
               <SheetClose asChild>
-                <a href="#portfolio" onClick={handleNav("portfolio")} className="story-link">Portfolio</a>
+                <button type="button" onClick={handleMobileNav("portfolio")} className="story-link text-left">Portfolio</button>
               </SheetClose>
               <SheetClose asChild>
-                <a href="#contact" onClick={handleNav("contact")} className="story-link">Contact</a>
+                <button type="button" onClick={handleMobileNav("contact")} className="story-link text-left">Contact</button>
               </SheetClose>
             </nav>
           </SheetContent>
