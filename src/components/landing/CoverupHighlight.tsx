@@ -1,5 +1,8 @@
+import * as React from "react"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Search } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useIsMobile } from "@/hooks/use-mobile";
 import g1 from "@/assets/coverup-1.jpg";
 import g2 from "@/assets/coverup-2.jpg";
 import g3 from "@/assets/coverup-3.jpg";
@@ -37,12 +40,21 @@ export default function CoverupHighlight() {
     { src: g16, alt: "Cover-up example 16" },
   ];
 
+  const isMobile = useIsMobile();
+  const perRow = isMobile ? 2 : 4;
+  const initialCount = perRow * 2; // 2 rows
+  const [expanded, setExpanded] = React.useState(false);
+  const visibleImages = React.useMemo(
+    () => images.slice(0, expanded ? images.length : initialCount),
+    [images, expanded, initialCount]
+  );
+
   return (
     <section id="coverup" className="px-4 pb-12 md:px-6 bg-[#070B14]">
       <div className="rounded-lg p-4 md:p-6 bg-transparent">
         <h2 className="text-xl md:text-[50px] font-semibold mt-[10px] mb-[45px] text-center text-[#F1F2F3]">Portfólio Cover-Up</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-          {images.map((it, idx) => (
+          {visibleImages.map((it, idx) => (
             <Dialog key={idx}>
               <DialogTrigger asChild>
                 <div className="group relative w-[95%] h-[300px] md:h-[390px] overflow-hidden rounded-md hover-scale animate-fade-in transition-all duration-300 ease-out hover:shadow-[0_0_7px_rgba(250,250,250,0.2)] cursor-pointer">
@@ -75,6 +87,17 @@ export default function CoverupHighlight() {
             </Dialog>
           ))}
         </div>
+        {images.length > initialCount && (
+          <div className="mt-6 flex justify-center">
+            <Button
+              onClick={() => setExpanded((v) => !v)}
+              aria-expanded={expanded}
+              variant="secondary"
+            >
+              {expanded ? "Show less" : "Show more"}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
