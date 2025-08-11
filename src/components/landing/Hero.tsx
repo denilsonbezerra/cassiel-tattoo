@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-3">
           <Button asChild className="w-full sm:w-auto">
             <a href={wa} target="_blank" rel="noopener noreferrer" aria-label="Book on WhatsApp">
-              <FaWhatsapp className="text-[35px]" /> BOOK VIA WHATSAPP
+              <FaWhatsapp /> BOOK VIA WHATSAPP
             </a>
           </Button>
         </div>

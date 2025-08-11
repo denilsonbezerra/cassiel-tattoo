@@ -1,14 +1,14 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Search } from "lucide-react";
-import g1 from "@/assets/gallery-4.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-6.jpg";
-import g4 from "@/assets/gallery-8.jpg";
-import g5 from "@/assets/gallery-10.jpg";
-import g6 from "@/assets/gallery-12.jpg";
-import g7 from "@/assets/gallery-14.jpg";
-import g8 from "@/assets/gallery-16.jpg";
+import g1 from "@/assets/coverup-4.jpg";
+import g2 from "@/assets/coverup-2.jpg";
+import g3 from "@/assets/coverup-6.jpg";
+import g4 from "@/assets/coverup-8.jpg";
+import g5 from "@/assets/coverup-10.jpg";
+import g6 from "@/assets/coverup-12.jpg";
+import g7 from "@/assets/coverup-14.jpg";
+import g8 from "@/assets/coverup-16.jpg";
 
 const items = [
   { src: g1, alt: "Tattoo pantheon realism" },
@@ -35,7 +35,7 @@ export default function Gallery() {
               <CarouselItem key={i} className="basis-full md:basis-1/2 lg:basis-1/3">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <article className="group relative overflow-hidden rounded-lg bg-card hover-scale animate-fade-in">
+                    <article className="group relative overflow-hidden rounded-lg bg-card hover-scale animate-fade-in cursor-pointer">
                       <img
                         src={it.src}
                         alt={it.alt}
