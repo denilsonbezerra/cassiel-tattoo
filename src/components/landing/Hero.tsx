@@ -11,13 +11,13 @@ export default function Hero() {
       <img
         src={bg}
         alt="Felipe Cassiel | Tattoos Realism, Blackwork & Cover-up"
-        className="absolute w-[80%] object-contain "
+        className="absolute md:w-[80%] w-[200%] object- "
         loading="eager"
       />
       <div className="absolute inset-0 bg-foreground/60" />
 
-      <div className="w-full relative max-w-screen flex flex-col items-center justify-center">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-[#F1F2F3]">
+      <div className="md:w-full px-[15px] text-center relative max-w-screen flex flex-col items-center justify-center">
+        <h1 className="text-2xl md:text-4xl font-bold tracking-tight mb-4 text-[#F1F2F3]">
           Felipe Cassiel | Tattoos Realism, Blackwork & Cover-up
         </h1>
         <p className="text-base md:text-lg text-muted-foreground mb-6 ">

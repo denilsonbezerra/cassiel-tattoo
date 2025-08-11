@@ -7,16 +7,16 @@ All colors MUST be HSL.
 */
 
 html, body {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 nav a {
   padding: 10px 15px;
   border-radius: 7px;
+  transition: all 200ms ease-in;
 }
 
 nav a:hover {
-  transition: 300ms ;
   background-color: #106A6B55;
 }
 
