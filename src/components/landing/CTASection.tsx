@@ -6,15 +6,15 @@ const wa = `https://wa.me/${phone}?text=${encodeURIComponent("I would like to bo
 
 export default function CTASection() {
   return (
-    <section id="contact" className="px-4 pb-24 md:px-6">
-      <div className="rounded-xl border bg-secondary/20 p-6 md:p-8">
-        <h2 className="text-xl md:text-2xl font-semibold mb-2">Ready for your next tattoo?</h2>
+    <section id="contact" className="px-4 py-12 md:px-6">
+      <div className="flex flex-col justify-center items-center rounded-xl border bg-secondary/20 p-6 md:p-8">
+        <h2 className="text-xl md:text-2xl font-semibold mb-2">Pronto para sua próxima tatuagem?</h2>
         <p className="text-muted-foreground mb-4">
-          Send your idea and get guidance on size, placement, and budget.
+          Nos envie a sua ideia e receba um guia de tamanhos, locais e orçamentos.
         </p>
         <Button asChild>
           <a href={wa} target="_blank" rel="noopener noreferrer" aria-label="Request a quote on WhatsApp">
-            <FaWhatsapp />Request a quote on WhatsApp
+            <FaWhatsapp /> SOLICITAR ORÇAMENTO
           </a>
         </Button>
       </div>

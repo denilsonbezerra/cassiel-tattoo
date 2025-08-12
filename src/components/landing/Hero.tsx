@@ -18,16 +18,16 @@ export default function Hero() {
 
       <div className="md:w-full px-[15px] text-center relative max-w-screen flex flex-col items-center justify-center">
         <h1 className="text-2xl md:text-4xl font-bold tracking-tight mb-4 text-[#F1F2F3]">
-          Felipe Cassiel | Tattoos Realism, Blackwork & Cover-up
+          Felipe Cassiel | Tattoos Realismo, Preto e Cinza & Cover-up
         </h1>
         <p className="text-base md:text-lg text-muted-foreground mb-6 ">
-          Exclusive projects, realism, blackwork, and restoration using cover-up techniques.
+          Projetos exclusivos, realismo, preto e cinza, e restauração usando técnicas de cover-up.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3">
           <Button asChild className="w-full sm:w-auto">
             <a href={wa} target="_blank" rel="noopener noreferrer" aria-label="Book on WhatsApp">
-              <FaWhatsapp /> BOOK VIA WHATSAPP
+              <FaWhatsapp /> AGENDAR VIA WHATSAPP
             </a>
           </Button>
         </div>

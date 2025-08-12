@@ -1,10 +1,9 @@
 import SEO from "@/components/SEO";
-import Header from "@/components/landing/Haeder";
+import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
 import About from "@/components/landing/About";
 import CoverupHighlight from "@/components/landing/CoverupHighlight";
 import RealismHighlight from "@/components/landing/RealismHighlight";
-import Gallery from "@/components/landing/Gallery";
 import CTASection from "@/components/landing/CTASection";
 import WhatsappButton from "@/components/landing/WhatsappButton";
 
@@ -15,9 +14,8 @@ const Index = () => {
       <Header  />
       <Hero />
       <About />
-      <CoverupHighlight />
       <RealismHighlight />
-      <Gallery />
+      <CoverupHighlight />
       <CTASection />
       <WhatsappButton />
     </main>
