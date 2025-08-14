@@ -12,7 +12,7 @@ export default function CTASection() {
         <p className="text-muted-foreground mb-4">
           Nos envie a sua ideia e receba um guia de tamanhos, locais e orçamentos.
         </p>
-        <Button asChild>
+        <Button asChild variant="secondary">
           <a href={wa} target="_blank" rel="noopener noreferrer" aria-label="Request a quote on WhatsApp">
             <FaWhatsapp /> SOLICITAR ORÇAMENTO
           </a>

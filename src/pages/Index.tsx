@@ -6,11 +6,12 @@ import CoverupHighlight from "@/components/landing/CoverupHighlight";
 import RealismHighlight from "@/components/landing/RealismHighlight";
 import CTASection from "@/components/landing/CTASection";
 import WhatsappButton from "@/components/landing/WhatsappButton";
+import Footer from "@/components/landing/Footer";
 
 const Index = () => {
   return (
     <main className="w-full h-screen overflow-x-hidden">
-      <SEO title="Felipe Cassiel | Tattoos Realism, Blackwork & Cover-up" description="Custom work, cover-up and fine line with focus on healing and aesthetics. Book your session via WhatsApp." />
+      <SEO title="Felipe Cassiel | Tattoos Realismo Preto e Cinza & Cover-up" description="Projetos exclusivos, realismo, preto e cinza, e restauração usando técnicas de cover-up." />
       <Header  />
       <Hero />
       <About />
@@ -18,6 +19,7 @@ const Index = () => {
       <CoverupHighlight />
       <CTASection />
       <WhatsappButton />
+      <Footer />
     </main>
   );
 };

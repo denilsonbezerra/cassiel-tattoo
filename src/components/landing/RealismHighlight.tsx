@@ -1,4 +1,5 @@
 import * as React from "react";
+import { FaPlay } from "react-icons/fa";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -34,9 +35,9 @@ export default function RealismHighlight() {
     );
 
     return (
-        <section id="realism" className="px-4 pb-4 md:px-6 bg-[#070B14]">
+        <section id="realism" className="px-4 md:px-6 bg-[#070B14]">
             <div className="rounded-lg p-4 md:p-6 bg-transparent">
-                <h2 className="text-[25px] md:text-[50px] font-bold mt-[15px] mb-[25px] text-center uppercase text-[#F1F2F3]">
+                <h2 className="text-[25px] md:text-[50px] font-bold mb-[25px] text-center uppercase text-[#F1F2F3]">
                     Portfólio Preto e Cinza
                 </h2>
 
@@ -46,26 +47,39 @@ export default function RealismHighlight() {
                             <DialogTrigger asChild>
                                 <div className="group relative w-[95%] h-[300px] md:h-[390px] overflow-hidden rounded-md hover-scale animate-fade-in transition-all duration-300 ease-out hover:shadow-[0_0_7px_rgba(250,250,250,0.2)] cursor-pointer">
                                     {it.type === "image" ? (
-                                        <img
-                                            src={it.src}
-                                            alt={it.alt}
-                                            className="w-full h-full object-cover transition-all duration-300 group-hover:blur-[2px]"
-                                            loading="lazy"
-                                            decoding="async"
-                                        />
+                                        <>
+                                            <img
+                                                src={it.src}
+                                                alt={it.alt}
+                                                className="w-full h-full object-cover transition-all duration-300 group-hover:blur-[2px]"
+                                                loading="lazy"
+                                                decoding="async"
+                                            />
+                                            <div
+                                                aria-hidden
+                                                className="pointer-events-none absolute inset-0 grid place-items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-background/5 backdrop-blur-sm"
+                                            >
+                                                <Search className="size-10 text-white drop-shadow-[0_0_2px_black]" />
+                                            </div>
+                                        </>
                                     ) : (
-                                        <video
-                                            src={it.src}
-                                            className="w-full h-full object-cover transition-all duration-300 group-hover:blur-[2px]"
-                                            preload="metadata"
-                                        />
+                                        <>
+                                            <video
+                                                src={it.src}
+                                                className="w-full h-full object-cover transition-all duration-300 group-hover:blur-[2px]"
+                                                preload="metadata"
+                                            />
+                                            <div className="absolute bottom-3 left-3 text-white font-bold">
+                                                <FaPlay size={20} className="drop-shadow-[0_0_2px_black]" />
+                                            </div>
+                                            <div
+                                                aria-hidden
+                                                className="pointer-events-none absolute inset-0 grid place-items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-background/5 backdrop-blur-sm"
+                                            >
+                                                <FaPlay className="size-7 text-white drop-shadow-[0_0_2px_black]" />
+                                            </div>
+                                        </>
                                     )}
-                                    <div
-                                        aria-hidden
-                                        className="pointer-events-none absolute inset-0 grid place-items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-background/5 backdrop-blur-sm"
-                                    >
-                                        <Search className="h-9 w-9 text-foreground" />
-                                    </div>
                                 </div>
                             </DialogTrigger>
 
@@ -96,7 +110,7 @@ export default function RealismHighlight() {
                             aria-expanded={expanded}
                             variant="secondary"
                         >
-                            {expanded ? "Mostrar menos" : "Mostrar mais"}
+                            {expanded ? "Fechar aba" : "Mostrar mais"}
                         </Button>
                     </div>
                 )}
