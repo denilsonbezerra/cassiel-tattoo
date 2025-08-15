@@ -51,7 +51,7 @@ export default function RealismHighlight() {
                                             <img
                                                 src={it.src}
                                                 alt={it.alt}
-                                                className="w-full h-full object-cover transition-all duration-300 group-hover:blur-[2px]"
+                                                className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110 group-hover:blur-[2px]"
                                                 loading="lazy"
                                                 decoding="async"
                                             />
@@ -66,7 +66,7 @@ export default function RealismHighlight() {
                                         <>
                                             <video
                                                 src={it.src}
-                                                className="w-full h-full object-cover transition-all duration-300 group-hover:blur-[2px]"
+                                                className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110 group-hover:blur-[2px]"
                                                 preload="metadata"
                                             />
                                             <div className="absolute bottom-3 left-3 text-white font-bold">

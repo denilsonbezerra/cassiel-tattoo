@@ -50,9 +50,9 @@ export default function CoverupHighlight() {
   );
 
   return (
-    <section id="coverup" className="px-4 md:px-6 bg-[#070B14]">
+    <section id="coverup" className="px-4 md:px-6 bg-[#F1F2F3]">
       <div className="rounded-lg p-4 md:p-6 bg-transparent">
-        <h2 className="text-[25px] md:text-[50px] font-bold mb-[25px] text-center uppercase text-[#F1F2F3]">Portfólio Cover-Up</h2>
+        <h2 className="text-[25px] md:text-[50px] font-bold mb-[25px] text-center uppercase text-[#070B14]">Portfólio Cover-Up</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
           {visibleImages.map((it, idx) => (
             <Dialog key={idx}>
@@ -61,7 +61,7 @@ export default function CoverupHighlight() {
                   <img
                     src={it.src}
                     alt={it.alt}
-                    className="w-full h-full object-cover transition-all duration-300 group-hover:blur-[2px]"
+                    className="w-full h-full object-cover transition-all duration-300 group-hover:scale-110 group-hover:blur-[2px]"
                     loading="lazy"
                     decoding="async"
                   />
