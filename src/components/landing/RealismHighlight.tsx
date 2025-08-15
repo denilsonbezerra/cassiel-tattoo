@@ -35,9 +35,9 @@ export default function RealismHighlight() {
     );
 
     return (
-        <section id="realism" className="px-4 md:px-6 bg-[#070B14]">
+        <section id="realism" className="px-4 md:px-6 bg-[#F1F2F3]">
             <div className="rounded-lg p-4 md:p-6 bg-transparent">
-                <h2 className="text-[25px] md:text-[50px] font-bold mb-[25px] text-center uppercase text-[#F1F2F3]">
+                <h2 className="text-[25px] md:text-[50px] font-bold mb-[25px] text-center uppercase text-[#070B14]">
                     Portfólio Preto e Cinza
                 </h2>
 

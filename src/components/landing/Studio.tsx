@@ -1,24 +1,24 @@
-import { Coffee, Thermometer, Waves, Wifi } from "lucide-react";
+import { Coffee, Thermometer, Sparkles, Wifi } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const benefits = [
   {
-    icon: <Thermometer className="w-8 h-8 text-primary" />,
+    icon: <Thermometer className="w-8 h-8 text-[#070B14]" />,
     title: "Ambiente Climatizado",
     description: "Estúdio com temperatura controlada para seu conforto durante toda a sessão"
   },
   {
-    icon: <Coffee className="w-8 h-8 text-primary" />,
+    icon: <Coffee className="w-8 h-8 text-[#070B14]" />,
     title: "Café & Bebidas",
-    description: "Café fresco, água, refrigerantes e outras bebidas disponíveis gratuitamente"
+    description: "Café fresco e água disponíveis gratuitamente"
   },
   {
-    icon: <Waves className="w-8 h-8 text-primary" />,
-    title: "Ambiente Relaxante",
-    description: "Música ambiente e decoração pensada para proporcionar tranquilidade"
+    icon: <Sparkles className="w-8 h-8 text-[#070B14]" />,
+    title: "Higienização Rigorosa",
+    description: "Todos os nossos equipamentos passam por um processo de limpeza e desinfecção antes e após cada uso."
   },
   {
-    icon: <Wifi className="w-8 h-8 text-primary" />,
+    icon: <Wifi className="w-8 h-8 text-[#070B14]" />,
     title: "Wi-Fi Gratuito",
     description: "Internet de alta velocidade para você se manter conectado"
   }
@@ -26,11 +26,11 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="py-16 px-4 bg-gradient-to-b from-background to-accent/5">
+    <section id="studio" className="bg-[#070B14] py-16 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Comodidades do Estúdio
+          <h2 className="text-3xl md:text-4xl font-bold text-[#F1F2F3] mb-4 uppercase">
+            Nosso Estúdio
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Oferecemos um ambiente confortável e acolhedor para que sua experiência seja única
@@ -50,7 +50,7 @@ export default function Benefits() {
                 <h3 className="text-lg font-semibold mb-2 text-card-foreground">
                   {benefit.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-foreground/70 leading-relaxed">
                   {benefit.description}
                 </p>
               </CardContent>
