@@ -28,11 +28,13 @@ export default function Header() {
       <ReptinkLogo />
 
       <nav className="hidden md:flex items-center gap-4 font-semibold">
-        <a href="#home" className="story-link">Home</a>
-        <a href="#about" className="story-link">Sobre</a>
-        <a href="#realism" className="story-link">Preto e Cinza</a>
-        <a href="#coverup" className="story-link">Cover‑up</a>
-        <a href="#contact" className="story-link">Contato</a>
+        <a href="#home" onClick={handleNav("home")} className="px-4 py-2 rounded-lg transition-all duration-200 ease-in hover:bg-[hsl(var(--nav-hover))]/30 active:scale-95 story-link">Home</a>
+        <a href="#about" onClick={handleNav("about")} className="px-4 py-2 rounded-lg transition-all duration-200 ease-in hover:bg-[hsl(var(--nav-hover))]/30 active:scale-95 story-link">Sobre</a>
+        <a href="#benefits" onClick={handleNav("benefits")} className="px-4 py-2 rounded-lg transition-all duration-200 ease-in hover:bg-[hsl(var(--nav-hover))]/30 active:scale-95 story-link">Comodidades</a>
+        <a href="#realism" onClick={handleNav("realism")} className="px-4 py-2 rounded-lg transition-all duration-200 ease-in hover:bg-[hsl(var(--nav-hover))]/30 active:scale-95 story-link">Preto e Cinza</a>
+        <a href="#coverup" onClick={handleNav("coverup")} className="px-4 py-2 rounded-lg transition-all duration-200 ease-in hover:bg-[hsl(var(--nav-hover))]/30 active:scale-95 story-link">Cover‑up</a>
+        <a href="#location" onClick={handleNav("location")} className="px-4 py-2 rounded-lg transition-all duration-200 ease-in hover:bg-[hsl(var(--nav-hover))]/30 active:scale-95 story-link">Localização</a>
+        <a href="#contact" onClick={handleNav("contact")} className="px-4 py-2 rounded-lg transition-all duration-200 ease-in hover:bg-[hsl(var(--nav-hover))]/30 active:scale-95 story-link">Contato</a>
       </nav>
 
       {/* Mobile: Hamburger + Sidebar */}
@@ -44,19 +46,25 @@ export default function Header() {
 
             <nav className="flex flex-col gap-3 text-lg font-medium">
               <SheetClose asChild>
-                <button type="button" onClick={handleMobileNav("home")} className="MOBILE-NAV story-link text-left">Home</button>
+                <button type="button" onClick={handleMobileNav("home")} className="text-left transition-colors duration-200 hover:text-[hsl(var(--nav-hover-mobile))] story-link">Home</button>
               </SheetClose>
               <SheetClose asChild>
-                <button type="button" onClick={handleMobileNav("about")} className="MOBILE-NAV story-link text-left">Sobre</button>
+                <button type="button" onClick={handleMobileNav("about")} className="text-left transition-colors duration-200 hover:text-[hsl(var(--nav-hover-mobile))] story-link">Sobre</button>
               </SheetClose>
               <SheetClose asChild>
-                <button type="button" onClick={handleMobileNav("realism")} className="MOBILE-NAV story-link text-left">Preto e Cinza</button>
+                <button type="button" onClick={handleMobileNav("benefits")} className="text-left transition-colors duration-200 hover:text-[hsl(var(--nav-hover-mobile))] story-link">Comodidades</button>
               </SheetClose>
               <SheetClose asChild>
-                <button type="button" onClick={handleMobileNav("coverup")} className="MOBILE-NAV story-link text-left">Cover‑up</button>
+                <button type="button" onClick={handleMobileNav("realism")} className="text-left transition-colors duration-200 hover:text-[hsl(var(--nav-hover-mobile))] story-link">Preto e Cinza</button>
               </SheetClose>
               <SheetClose asChild>
-                <button type="button" onClick={handleMobileNav("contact")} className="MOBILE-NAV story-link text-left">Contato</button>
+                <button type="button" onClick={handleMobileNav("coverup")} className="text-left transition-colors duration-200 hover:text-[hsl(var(--nav-hover-mobile))] story-link">Cover‑up</button>
+              </SheetClose>
+              <SheetClose asChild>
+                <button type="button" onClick={handleMobileNav("location")} className="text-left transition-colors duration-200 hover:text-[hsl(var(--nav-hover-mobile))] story-link">Localização</button>
+              </SheetClose>
+              <SheetClose asChild>
+                <button type="button" onClick={handleMobileNav("contact")} className="text-left transition-colors duration-200 hover:text-[hsl(var(--nav-hover-mobile))] story-link">Contato</button>
               </SheetClose>
             </nav>
           </SheetContent>

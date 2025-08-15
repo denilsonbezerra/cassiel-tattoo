@@ -6,39 +6,6 @@ html, body {
   scroll-behavior: smooth !important;
 }
 
-nav a {
-  padding: 10px 15px;
-  border-radius: 7px;
-  transition: all 200ms ease-in;
-}
-
-nav a:hover {
-  background-color: #106A6B55;
-}
-
-nav a:active{
-  scale: 95%;
-}
-
-.MOBILE-NAV:hover {
-  color: #106A6B;
-}
-
-#CONTATOS a,
-#FOOTER-NAV a {
-  padding: 0;
-  color: #CCCCCC;
-  transition: all 200ms ease-in;
-  display: flex;
-  align-items: center;
-  height: fit-content;
-}
-
-#CONTATOS a:hover,
-#FOOTER-NAV a:hover {
-  color: #699689;
-  background-color: transparent;
-}
 
 @layer base {
   :root {
@@ -72,20 +39,19 @@ nav a:active{
 
     --radius: 0.5rem;
 
+    /* Navigation hover colors */
+    --nav-hover: 182 100% 23%;
+    --nav-hover-mobile: 182 100% 23%;
+    --footer-link: 0 0% 80%;
+    --footer-link-hover: 153 25% 60%;
+
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
