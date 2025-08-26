@@ -83,12 +83,12 @@ export default function RealismHighlight() {
                                 </div>
                             </DialogTrigger>
 
-                            <DialogContent className="max-w-[100vw] max-h-[90dvh] w-auto h-auto p-2">
+                            <DialogContent className="max-w-[80dvw] max-h-[90dvh] md:max-w-fit w-max h-auto p-2 rounded-xl">
                                 {it.type === "image" ? (
                                     <img
                                         src={it.src}
                                         alt={it.alt}
-                                        className="h-full max-w-full max-h-[80dvh] object-cover rounded-lg"
+                                        className="w-auto h-full max-h-[80dvh] object-cover rounded-lg"
                                     />
                                 ) : (
                                     <video

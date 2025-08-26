@@ -22,27 +22,27 @@ import g16 from "@/assets/coverup-16.jpg";
 
 export default function CoverupHighlight() {
   const images = [
-    { src: g1, alt: "Cover-up example 1" },
-    { src: g2, alt: "Cover-up example 2" },
-    { src: g3, alt: "Cover-up example 3" },
-    { src: g4, alt: "Cover-up example 4" },
-    { src: g5, alt: "Cover-up example 5" },
-    { src: g6, alt: "Cover-up example 6" },
-    { src: g7, alt: "Cover-up example 7" },
-    { src: g8, alt: "Cover-up example 8" },
-    { src: g9, alt: "Cover-up example 9" },
-    { src: g10, alt: "Cover-up example 10" },
-    { src: g11, alt: "Cover-up example 11" },
-    { src: g12, alt: "Cover-up example 12" },
-    { src: g13, alt: "Cover-up example 13" },
-    { src: g14, alt: "Cover-up example 14" },
-    { src: g15, alt: "Cover-up example 15" },
-    { src: g16, alt: "Cover-up example 16" },
+    { src: g1, alt: "Cover-up example 1", type: "image" },
+    { src: g2, alt: "Cover-up example 2", type: "image" },
+    { src: g3, alt: "Cover-up example 3", type: "image" },
+    { src: g4, alt: "Cover-up example 4", type: "image" },
+    { src: g5, alt: "Cover-up example 5", type: "image" },
+    { src: g6, alt: "Cover-up example 6", type: "image" },
+    { src: g7, alt: "Cover-up example 7", type: "image" },
+    { src: g8, alt: "Cover-up example 8", type: "image" },
+    { src: g9, alt: "Cover-up example 9", type: "image" },
+    { src: g10, alt: "Cover-up example 10", type: "image" },
+    { src: g11, alt: "Cover-up example 11", type: "image" },
+    { src: g12, alt: "Cover-up example 12", type: "image" },
+    { src: g13, alt: "Cover-up example 13", type: "image" },
+    { src: g14, alt: "Cover-up example 14", type: "image" },
+    { src: g15, alt: "Cover-up example 15", type: "image" },
+    { src: g16, alt: "Cover-up example 16", type: "image" },
   ];
 
   const isMobile = useIsMobile();
   const perRow = isMobile ? 2 : 4;
-  const initialCount = perRow * 2; // 2 rows
+  const initialCount = perRow * 2;
   const [expanded, setExpanded] = React.useState(false);
   const visibleImages = React.useMemo(
     () => images.slice(0, expanded ? images.length : initialCount),
@@ -77,12 +77,21 @@ export default function CoverupHighlight() {
                   </div>
                 </div>
               </DialogTrigger>
-              <DialogContent className="max-w-[100vw] max-h-[90dvh] w-auto h-auto p-2">
-                <img
-                  src={it.src}
-                  alt={it.alt}
-                  className="h-full max-w-full max-h-[80dvh] object-cover rounded-lg"
-                />
+              <DialogContent className="max-w-[80dvw] max-h-[90dvh] md:max-w-fit w-max h-auto p-2 rounded-xl">
+                {it.type === "image" ? (
+                  <img
+                    src={it.src}
+                    alt={it.alt}
+                    className="w-auto h-full max-h-[80dvh] object-cover rounded-lg"
+                  />
+                ) : (
+                  <video
+                    src={it.src}
+                    controls
+                    autoPlay
+                    className="h-full max-w-full max-h-[80dvh] object-cover rounded-lg"
+                  />
+                )}
               </DialogContent>
             </Dialog>
           ))}
