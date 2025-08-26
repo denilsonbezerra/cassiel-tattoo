@@ -17,14 +17,10 @@ const Index = () => {
       <Header />
       <Hero />
       <About />
-      <div id="benefits">
-        <Benefits />
-      </div>
+      <Benefits />
       <RealismHighlight />
       <CoverupHighlight />
-      <div id="location">
-        <Location />
-      </div>
+      <Location />
       <CTASection />
       <WhatsappButton />
       <Footer />
