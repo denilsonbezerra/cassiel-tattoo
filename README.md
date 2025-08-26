@@ -1,73 +1,26 @@
-# Welcome to your Lovable project
+Cassiel Tattoo – Landing Page
+🎨 Sobre o Projeto
 
-## Project info
+Esta é a página oficial de apresentação do tatuador Felipe Cassiel, especializada em tatuagens de realismo em preto e cinza e técnicas de cover-up. A landing page serve como portfólio digital, destacando os principais trabalhos, estilo e informações de contato.
 
-**URL**: https://lovable.dev/projects/e9ee4ebb-1f10-4179-9393-d7cbb53b9fc4
+🖼️ Funcionalidades
 
-## How can I edit this code?
+Galeria de Portfólio: Apresenta uma seleção curada das melhores tatuagens realizadas por Felipe Cassiel.
 
-There are several ways of editing your application.
+Informações de Contato: Facilita o contato com o artista para agendamentos e consultas.
 
-**Use Lovable**
+Design Responsivo: O layout é otimizado para visualização em dispositivos móveis e desktops.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e9ee4ebb-1f10-4179-9393-d7cbb53b9fc4) and start prompting.
+Acessibilidade: Foco na experiência do usuário, com navegação intuitiva e conteúdo acessível.
 
-Changes made via Lovable will be committed automatically to this repo.
+⚙️ Tecnologias Utilizadas
 
-**Use your preferred IDE**
+Frontend: React TypeScript
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Framework: Vercel para deploy contínuo
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Design: Foco em estética minimalista e funcionalidade
 
-Follow these steps:
+📄 Licença
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/e9ee4ebb-1f10-4179-9393-d7cbb53b9fc4) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Este projeto está licenciado sob a Licença MIT – veja o arquivo LICENSE para mais detalhes.
